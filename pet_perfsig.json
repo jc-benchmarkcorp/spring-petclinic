@@ -14,6 +14,12 @@
 			"upperWarning": 5000,
 			"upperSevere": 8000
 		},
+                {
+			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
+			"aggregation": "avg",
+			"upperWarning": 5,
+			"upperSevere": 7
+		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
 			"aggregation": "avg",
