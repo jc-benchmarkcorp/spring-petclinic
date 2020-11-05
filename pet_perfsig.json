@@ -15,11 +15,11 @@
 			"upperSevere": 8000
 		},
 		{
-			"timeseriesId": "com.dynatrace.builtin:cloud.kubernetes.cluster.cpuRequested",
-			"aggregation": "avg",
+			"timeseriesId": "com.dynatrace.builtin:builtin:containers.cpu.usagePercent",
+			"aggregation": "percentile",
                         "tags": "[Kubernetes]app:petclinic",
-			"upperWarning": 50,
-			"upperSevere": 70
+			"upperWarning": 5,
+			"upperSevere": 7
 		}
 	]
 }
