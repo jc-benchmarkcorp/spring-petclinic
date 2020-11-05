@@ -16,7 +16,7 @@
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:builtin:docker.container.memory",
-			"aggregation": "avg",
+			"aggregation": "percentile",
                         "tags": "[Kubernetes]app:petclinic",
 			"upperWarning": 5,
 			"upperSevere": 7
