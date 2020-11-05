@@ -15,7 +15,7 @@
 			"upperSevere": 8000
 		},
 		{
-			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
+			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
 			"aggregation": "avg",
                         "tags": "[Kubernetes]app:petclinic",
 			"upperWarning": 5,
