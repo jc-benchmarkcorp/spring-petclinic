@@ -17,14 +17,16 @@
                 {
 			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
 			"aggregation": "avg",
-			"upperWarning": 5,
-			"upperSevere": 7
+                        "entityIds": "PROCESS_GROUP_INSTANCE-08852E4C76835D30",
+			"upperWarning": 50,
+			"upperSevere": 70
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
 			"aggregation": "avg",
-			"upperWarning": 5,
-			"upperSevere": 7
+                        "entityIds": "PROCESS_GROUP_INSTANCE-08852E4C76835D30",
+			"upperWarning": 50,
+			"upperSevere": 70
 		}
 	]
 }
