@@ -15,12 +15,6 @@
 			"upperSevere": 8000
 		},
                 {
-			"timeseriesId": "com.dynatrace.builtin:docker.container.memory.usagepercent",
-			"aggregation": "avg",
-			"upperWarning": 50,
-			"upperSevere": 90
-		},
-                {
 			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
 			"aggregation": "avg",
 			"upperWarning": 50,
