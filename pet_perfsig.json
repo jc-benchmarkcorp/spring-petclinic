@@ -17,12 +17,14 @@
                 {
 			"timeseriesId": "com.dynatrace.builtin:docker.container.memory.usagepercent",
 			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic",
 			"upperWarning": 50,
 			"upperSevere": 90
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
 			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic",
 			"upperWarning": 50,
 			"upperSevere": 90
 		}
