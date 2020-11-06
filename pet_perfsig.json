@@ -20,6 +20,12 @@
 			"upperWarning": 50,
 			"upperSevere": 90
 		},
+                {
+			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
+			"aggregation": "avg",
+			"upperWarning": 50,
+			"upperSevere": 90
+		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
 			"aggregation": "avg",
