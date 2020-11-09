@@ -38,7 +38,12 @@ podTemplate(
                        tags: [[context: 'Kubernetes', key: 'app', value: 'petclinic']]
                        ]
                   ]) {
-            sh "kubectl -n jmeter exec -ti jmeter-master-855fdd69f-zm9rt -- /bin/bash /load_test petclinc.jmx"
+          
+          sh  '''
+                 master_pod=$(kubectl get pod -l jmeter_mode=master -n jmeter -o jsonpath="{.items[0].metadata.name}")
+                 kubectl cp ./spring-petclinic/petclinic.jmx $master_pod:/ -n jmeter
+                 kubectl -n jmeter exec -ti $master_pod -- /bin/bash /load_test petclinic.jmx
+              '''
             }   
         perfSigDynatraceReports envId: 'Dynatrace Tenant', 
         nonFunctionalFailure: 1, 
