@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: jmeter-solo
-        image: gcr.io/manage-261115/jmeter:latest
+        image: gcr.io/manage-261115/jmeter:v1
         imagePullPolicy: IfNotPresent
         command: [ "/bin/bash", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
