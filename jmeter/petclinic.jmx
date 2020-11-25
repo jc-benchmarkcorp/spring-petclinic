@@ -45,7 +45,7 @@
             </elementProp>
             <elementProp name="LOOP_COUNT" elementType="Argument">
               <stringProp name="Argument.name">LOOP_COUNT</stringProp>
-              <stringProp name="Argument.value">${__P(LOOP_COUNT,1000)}</stringProp>
+              <stringProp name="Argument.value">${__P(LOOP_COUNT,100)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="PROTOCOL" elementType="Argument">
