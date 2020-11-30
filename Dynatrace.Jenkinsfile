@@ -40,9 +40,9 @@ podTemplate(
                   ]) {
           
           sh  '''
-                 master_pod=$(kubectl get pod -l jmeter_mode=master -n jmeter -o jsonpath="{.items[0].metadata.name}")
-                 kubectl cp ./spring-petclinic/petclinic.jmx $master_pod:/ -n jmeter
-                 kubectl -n jmeter exec -ti $master_pod -- /bin/bash /load_test petclinic.jmx
+             jmeter_pod=$(kubectl get pod -n jmeter -o jsonpath="{.items[0].metadata.name}")
+             kubectl cp ./spring-petclinic/jmeter/petclinic.jmx $jmeter_pod:/ -n jmeter
+             kubectl -n jmeter exec -i $jmeter_pod -- /bin/bash /opt/apache-jmeter-5.3/bin/jmeter -n -t ../../petclinic.jmx -JTHREADS=100 -JLOOP_COUNT=500
               '''
             }   
         perfSigDynatraceReports envId: 'Dynatrace Tenant', 
