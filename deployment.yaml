@@ -45,7 +45,6 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
         backend:
           serviceName: petclinic
           servicePort: 80
