@@ -44,7 +44,7 @@ spec:
   - host: petclinic.mc1985.net
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: petclinic
           servicePort: 80
