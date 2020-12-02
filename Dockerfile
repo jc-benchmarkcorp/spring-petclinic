@@ -1,10 +1,15 @@
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
+FROM alpine:latest as START
+WORKDIR /app
+RUN apk add git -f
+RUN git clone https://github.com/jc-benchmarkcorp/spring-petclinic.git
 
-RUN apk add --update make git curl curl-dev openssh python3 && \
-    git clone https://github.com/spring-projects/spring-petclinic.git &&\
-    cd spring-petclinic &&\
-    ./mvnw package
+FROM maven:3.6.3-jdk-11-slim as BUILD
+WORKDIR /app
+COPY --from=START /app/spring-petclinic /app
+RUN mvn install
 
-COPY ${JAR_FILE} app.jar
+FROM openjdk:16-slim
+WORKDIR /app
+ARG JAR=spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar
+COPY --from=BUILD /app/target/$JAR /app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
