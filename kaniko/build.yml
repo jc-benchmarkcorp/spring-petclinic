@@ -1,24 +1,23 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: v1
+kind: Pod
 metadata:
   name: kaniko
 spec:
-  template:
-    spec:
-      containers:
-      - name: kaniko
-        image: gcr.io/kaniko-project/executor:latest
-        args: ["--dockerfile=Dockerfile",
-               "--context=git://github.com/jc-benchmarkcorp/spring-petclinic",
-               "--destination=gcr.io/manage-261115/petclinic:latest"]
-        volumeMounts:
-        - name: kaniko-secret
-          mountPath: "/secret"
-        env:
-        - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: /secret/kaniko-secret.json
-      restartPolicy: Never
-      volumes:
-      - name: kaniko-secret
-        secret:
-          secretName: kaniko-secret
+  containers:
+  - name: kaniko
+    image: gcr.io/kaniko-project/executor:latest
+    args:
+    - "--dockerfile=Dockerfile"
+    - "--context=git://github.com/jc-benchmarkcorp/spring-petclinic"
+    - "--destination=gcr.io/manage-261115/petclinictest:latest"
+    volumeMounts:
+    - name: kaniko-secret
+      mountPath: /secret
+    env:
+    - name: GOOGLE_APPLICATION_CREDENTIALS
+      value: /secret/kaniko-secret.json
+  restartPolicy: Never
+  volumes:
+  - name: kaniko-secret
+    secret:
+      secretName: kaniko-secret
