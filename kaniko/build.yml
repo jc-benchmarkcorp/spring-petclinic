@@ -20,4 +20,4 @@ spec:
   volumes:
   - name: kaniko-secret
     secret:
-      secretName: kaniko-secret
+      secretName: kaniko-secret.
