@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: petclinic
-        image: gcr.io/manage-261115/petclinic
+        image: gcr.io/manage-261115/petclinic:latest
         ports:
         - containerPort: 8080
 ---          
