@@ -6,7 +6,7 @@ RUN git clone https://github.com/jc-benchmarkcorp/spring-petclinic.git
 FROM maven:alpine as BUILD
 WORKDIR /app
 COPY --from=START /app/spring-petclinic /app
-RUN mvn install -DskipTests
+RUN mvn install
 
 FROM openjdk:8-alpine
 WORKDIR /app
