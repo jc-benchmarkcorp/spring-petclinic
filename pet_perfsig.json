@@ -1,12 +1,6 @@
 {
 	"spec_version": "2.0",
-	"timeseries": [{
-			"timeseriesId": "com.dynatrace.builtin:service.responsetime",
-			"aggregation": "percentile",
-			"tags": "[Kubernetes]app:petclinic",
-			"upperLimit": 18000000,
-			"lowerLimit": 15000000
-		},
+	"timeseries": [
 		{
 			"timeseriesId": "com.dynatrace.builtin:service.responsetime",
 			"aggregation": "avg",
