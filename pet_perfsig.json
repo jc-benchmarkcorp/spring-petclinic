@@ -20,11 +20,13 @@
 		},
                 {
 			"timeseriesId": "com.dynatrace.builtin:pgi.mem.usage",
-			"aggregation": "avg"
+			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic"
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:pgi.cpu.usage",
-			"aggregation": "avg"
+			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic"
 		}
 	]
 }
