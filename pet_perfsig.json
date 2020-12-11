@@ -15,7 +15,8 @@
 			"upperSevere": 8000
 		},
                 {
-			"timeseriesId": "com.dynatrace.builtin:service.errorcounthttp4xx",
+			"timeseriesId": "com.dynatrace.builtin:service.failurerate",
+                        "aggregation": "sum",
 			"tags": "[Kubernetes]app:petclinic"
 		},
 		{
