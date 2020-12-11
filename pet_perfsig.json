@@ -21,11 +21,13 @@
                         {
 			"timeseriesId": "com.dynatrace.builtin:docker.container.memory",
 			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic",
 			"upperWarning": 50,
 			"upperSevere": 90
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:docker.container.cpu",
+                        "tags": "[Kubernetes]app:petclinic",
 			"aggregation": "avg",
 			"upperWarning": 50,
 			"upperSevere": 90
