@@ -24,7 +24,8 @@
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:pgi.cpu.usage",
-			"aggregation": "avg"
+			"aggregation": "avg",
+                        "tags": "[Kubernetes]app:petclinic"
 		}
 	]
 }
