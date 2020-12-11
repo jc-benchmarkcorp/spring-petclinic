@@ -18,19 +18,13 @@
 			"aggregation": "count",
 			"tags": "[Kubernetes]app:petclinic"
 		},
-                        {
+                {
 			"timeseriesId": "com.dynatrace.builtin:pgi.mem.usage",
-			"aggregation": "avg",
-                        "tags": "[Kubernetes]app:petclinic",
-			"upperWarning": 50,
-			"upperSevere": 90
+			"aggregation": "avg"
 		},
 		{
 			"timeseriesId": "com.dynatrace.builtin:pgi.cpu.usage",
-                        "tags": "[Kubernetes]app:petclinic",
-			"aggregation": "avg",
-			"upperWarning": 50,
-			"upperSevere": 90
+			"aggregation": "avg"
 		}
 	]
 }
